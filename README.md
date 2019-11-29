@@ -3,7 +3,7 @@
 Minimal Pharo Server Tools is a collection of scripts to install, build and deploy 
 headless Pharo server applications using command line tools.
 
-We're assuming you use Pharo 7 or 8.
+We're assuming you use Pharo 7 or 8 and want to deploy to Ubuntu GNU Linux.
 
 Furthermore, we assuyme your code is loadable from a single baseline from a git repository.
 
@@ -46,7 +46,7 @@ Let's assume you want to add a configuration for a service called foobar-server.
 - create a subdirectory run/foobar-server
 - copy repl.sh unchanged (unless you want to use a different port)
 - copy deploy.sh and change SERVICE to foobar-server
-- copy run-pharo-http-server.st to run-foobar-server.st and edit it start your service
+- copy run-pharo-http-server.st to run-foobar-server.st and edit it start your service instead of ZnServer
 - copy pharo-http-server.service to foobar-server.service and edit it so that foobar-server is used as top level directory instead of pharo-http-server and that run-foobar-server is used instead of run-pharo-http-server
 
 That should be all.
