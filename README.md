@@ -40,8 +40,16 @@ $ sudo systemctl restart pharo-http-server
 ````
 
 For your own needs, you will have to edit some variables in the build script.
-
 For each of your deployed services, copy/rename/edit a run/my-service directory.
+Let's assume you want to add a configuration for a service called foobar-server.
+
+- create a subdirectory run/foobar-server
+- copy repl.sh unchanged (unless you want to use a different port)
+- copy deploy.sh and change SERVICE to foobar-server
+- copy run-pharo-http-server.st to run-foobar-server.st and edit it start your service
+- copy pharo-http-server.service to foobar-server.service and edit it so that foobar-server is used as top level directory instead of pharo-http-server and that run-foobar-server is used instead of run-pharo-http-server
+
+That should be all.
 
 Don't forget to add https://github.com/svenvc/NeoConsole as a dependency to your project's baseline.
 
