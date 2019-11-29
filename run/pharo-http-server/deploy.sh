@@ -11,7 +11,7 @@ mkdir $SERVICE_DIR && cd $SERVICE_DIR
 cp $SCRIPTS_DIR/pharo-ctl.sh .
 cp $SCRIPTS_DIR/run/$SERVICE/*.sh .
 cp $SCRIPTS_DIR/run/$SERVICE/*.st .
-m4 -D_USER_=$USER run/pharo-http-server/$SERVICE.service > $SERVICE.service
+m4 -D_USER_=$USER $SCRIPTS_DIR/run/pharo-http-server/$SERVICE.service > $SERVICE.service
 
 cp $PHARO_DIR/$IMAGE.* .
 cp -R $PHARO_DIR/pharo-vm .
