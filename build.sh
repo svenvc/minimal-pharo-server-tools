@@ -8,7 +8,7 @@ if [ -z "$MC_NAME" ]; then
   MC_NAME=NeoConsole
 fi
 if [ -z "$MC_REPOSITORY" ]; then 
-  MC_REPOSITORY=https://github.com/svenvc/minimal-pharo-server-tools.git
+  MC_REPOSITORY=https://github.com/svenvc/NeoConsole.git
 fi
 if [ -z "$MC_BASELINE" ]; then 
   MC_BASELINE=BaselineOf$MC_NAME
