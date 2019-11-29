@@ -6,9 +6,9 @@ Transcript
   show: 'Starting '; show: (NeoConsoleMetricDelegate startOn: 42002); cr;
   flush.
 
-NeoConsole current loadOSEnvironment.
+NeoConsoleEnvironment current loadOSEnvironment.
 
-(ZnServer defaultOn: (NeoConsole current at: #'PHARO_HTTP_PORT' ifAbsent: [ 8080 ]))
+(ZnServer defaultOn: (NeoConsoleEnvironment current at: #'PHARO_HTTP_PORT' ifAbsent: [ 8080 ]))
   logToTranscript;
   logLevel: 2;
   start.

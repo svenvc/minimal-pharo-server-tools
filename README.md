@@ -14,7 +14,7 @@ $ git clone https://github.com/svenvc/minimal-pharo-server-tools.git
 $ ~/minimal-pharo-server-tools/install.sh
 $ cd build && ~/pharo/build.sh
 $ ~/minimal-pharo-server-tools/run/pharo-http-server/deploy.sh
-$ sudo systemctl start pharo-http-service
+$ sudo systemctl start pharo-http-server
 ````
 
 Now the service named pharo-http-service is running. Log files are written in ~/pharo-http-service per day. 
@@ -22,9 +22,9 @@ You can locally connect to the running image with a REPL and check metrics.
 
 ````
 $ cd pharo-http-service
-$ sudo systemctl status pharo-http-service
+$ sudo systemctl status pharo-http-server
 $ ./repl.sh
-$ ./pharo-ctl.sh run-pharo-http-service pid pharo-production
+$ ./pharo-ctl.sh run-pharo-http-server pid pharo-production
 $ curl http://localhost:8080/random/64
 $ curl http://localhost:42002/metrics
 $ ls *.log
@@ -35,8 +35,8 @@ pharo-production .image and .changes over and restart your service using systemc
 
 ````
 $ cd pharo && ./build.sh
-$ cp ~/pharo/pharo-production.* ~/pharo-http-service
-$ sudo systemctl restart pharo-http-service
+$ cp ~/pharo/pharo-production.* ~/pharo-http-server
+$ sudo systemctl restart pharo-http-server
 ````
 
 For your own needs, you will have to edit some variables in the build script.
