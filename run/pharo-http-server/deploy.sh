@@ -4,7 +4,7 @@
 SERVICE=pharo-http-server
 SERVICE_DIR=$HOME/$SERVICE
 PHARO_DIR=$HOME/pharo
-SCRIPTS_DIR=minimal-pharo-server-tools
+SCRIPTS_DIR=$HOME/minimal-pharo-server-tools
 IMAGE=pharo-production
 
 mkdir $SERVICE_DIR && cd $SERVICE_DIR
