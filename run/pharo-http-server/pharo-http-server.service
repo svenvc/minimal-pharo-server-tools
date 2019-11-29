@@ -1,0 +1,17 @@
+[Unit]
+Description=Pharo HTTP Server
+After=network.target
+
+[Service]
+Type=forking
+User=_USER_
+WorkingDirectory=/home/_USER_/pharo-http-server
+ExecStart=/home/_USER_/pharo-http-server/pharo-ctl.sh run-pharo-http-server start pharo-production
+ExecStop=/home/_USER_/pharo-http-server/pharo-ctl.sh run-pharo-http-server stop pharo-production
+PIDFile=/home/_USER_/pharo-http-server/run-pharo-http-server.pid
+Restart=always
+TimeoutSec=3
+LimitRTPRIO=2:2
+
+[Install]
+WantedBy=default.target
