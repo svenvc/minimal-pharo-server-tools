@@ -4,8 +4,8 @@
 SERVICE=pharo-http-server
 SERVICE_DIR=$HOME/$SERVICE
 PHARO_DIR=$HOME/pharo
-SCRIPTS_DIR=$PHARO_DIR/pharo-local/iceberg/t3-pharo/scripts
-IMAGE=t3-pharo
+SCRIPTS_DIR=minimal-pharo-server-tools
+IMAGE=pharo-production
 
 mkdir $SERVICE_DIR && cd $SERVICE_DIR
 cp $SCRIPTS_DIR/pharo-ctl.sh .

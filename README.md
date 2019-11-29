@@ -13,7 +13,7 @@ There is one example, pharo-http-server, included.
 $ git clone https://github.com/svenvc/minimal-pharo-server-tools.git 
 $ ~/minimal-pharo-server-tools/install.sh
 $ cd build && ~/pharo/build.sh
-$ ~/pharo/pharo-local/iceberg/minimal-pharo-server-tools/run/pharo-http-server/deploy.sh
+$ ~/minimal-pharo-server-tools/run/pharo-http-server/deploy.sh
 $ sudo systemctl start pharo-http-service
 ````
 
@@ -32,6 +32,12 @@ $ ls *.log
 
 Whenever you commit new code and to deploy, you first do a new build, then copy the new 
 pharo-production .image and .changes over and restart your service using systemctl.
+
+````
+$ cd pharo && ./build.sh
+$ cp ~/pharo/pharo-production.* ~/pharo-http-service
+$ sudo systemctl restart pharo-http-service
+````
 
 For your own needs, you will have to edit some variables in the build script.
 
