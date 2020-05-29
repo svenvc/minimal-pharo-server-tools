@@ -12,7 +12,7 @@ There is one example, pharo-http-server, included.
 ````
 $ git clone https://github.com/svenvc/minimal-pharo-server-tools.git 
 $ ~/minimal-pharo-server-tools/install.sh
-$ cd build && ~/pharo/build.sh
+$ cd pharo && ~/pharo/build.sh
 $ ~/minimal-pharo-server-tools/run/pharo-http-server/deploy.sh
 $ sudo systemctl start pharo-http-server
 ````
